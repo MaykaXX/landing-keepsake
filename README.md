@@ -1,34 +1,15 @@
-# Keepsake — landing page
+# Keepsake — Landing Page
 
-Адаптивний односторінковий лендінг дизайн-агенції Keepsake за макетом у Figma (Desktop 1280 / Tablet 768 / Mobile 375).
+Адаптивний лендінг для дизайн-агенції Keepsake, виконаний суто за допомогою чистого HTML5 та CSS3 без використання JavaScript або CSS-фреймворків.
 
-**Демо:** https://<your-username>.github.io/landing-keepsake/
+## Посилання
+- **Demo**: [https://<username>.github.io/landing-keepsake/](https://<username>.github.io/landing-keepsake/)
+- **Репозиторій**: `landing-keepsake`
 
 ## Технології та рішення
-
-- **HTML5 + CSS3**, без фреймворків і UI-бібліотек, без JavaScript.
-- **Семантика:** `header`, `nav`, `main`, `section`, `article`, `figure`, `footer`, `form`; один `h1`, коректна ієрархія `h2` → `h3`.
-- **Mobile first:** базові стилі для 375, далі `@media (min-width: 768px)` та `(min-width: 1280px)`. Сторінка коректна від 320 до 1920 px, контейнер на великих екранах — max 1100 px.
-- **CSS-змінні** в `:root`: кольори, шрифти, відступи, розміри типографіки, які змінюються по брейкпоінтах.
-- **Flexbox** для розкладки (шапка, послуги, статистика, клієнти, журнал, футер); **CSS Grid** лише для сітки робіт (3 / 2 / 1 колонка).
-- **Ілюстрації карточок** намальовано на CSS на «полотні» 357×282 і масштабовано через container query units (`cqw`), тож пропорції збігаються з макетом на будь-якій ширині.
-- **Мобільне меню без JS:** `popover` + `popovertarget` (Popover API), бургер перетворюється на хрестик через `:has(.menu:popover-open)`.
-- **Фільтр портфоліо без JS:** radio-кнопки + селектор `:checked ~` за атрибутом `data-category`.
-- **Ховер карточки** (оверлей, «+», назва, категорія) працює також із клавіатури через `:focus-within`.
-- **Форма підписки:** HTML-валідація (`type="email"`, `required`), стан помилки через `:user-invalid`, стан success через `:target`, помилка пов'язана з полем через `aria-describedby`.
-- **Fixed header:** на ≥768 стискається при скролі (`animation-timeline: scroll()`, прогресивне покращення для Chromium); кнопка «вгору» завжди на екрані.
-- **Доступність:** видимий `:focus-visible`, `aria-label` на іконкових кнопках, skip-link, `prefers-reduced-motion`.
-- **Шрифти:** Oswald, Open Sans, Dancing Script, Lora (Google Fonts, `display=swap`).
-- **Іконки:** інлайн-SVG (sprite + `<use>`).
-
-## Структура
-
-```
-landing-keepsake/
-├── index.html
-├── css/
-│   ├── reset.css
-│   └── style.css
-├── images/
-└── fonts/
-```
+- **Семантичний HTML5**: `header`, `nav`, `main`, `section`, `article`, `footer`, `form`. Ієрархія `h1`–`h3` без порушень.
+- **Mobile First**: базові стилі для 375px, медіа-запити на `@media (min-width: 768px)` та `@media (min-width: 1280px)`.
+- **CSS-only мобільне меню**: нативний Popover API (`popover`, `popovertarget`, `popovertargetaction="hide"`) із перетворенням бургера на хрестик через `:has(.menu:popover-open)`.
+- **Фільтрація робіт**: через приховані радіокнопки `[type="radio"]` та селектор `~`.
+- **Стани форми підписки**: валідація поля email через `:user-invalid` та екран успіху без перезавантаження через `:target`.
+- **Продуктивність**: оптимізовані WebP-зображення з атрибутами `width`, `height` та `loading="lazy"`. Інлайн-SVG спрайт для піктограм.
