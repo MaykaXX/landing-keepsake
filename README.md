@@ -3,7 +3,7 @@
 Адаптивний лендінг для дизайн-агенції Keepsake, виконаний суто за допомогою чистого HTML5 та CSS3 без використання JavaScript або CSS-фреймворків.
 
 ## Посилання
-- **Demo**: [https://<username>.github.io/landing-keepsake/](https://<username>.github.io/landing-keepsake/)
+- **Demo**: [https://maykaxx.github.io/landing-keepsake/](https://maykaxx.github.io/landing-keepsake/)
 - **Репозиторій**: `landing-keepsake`
 
 ## Технології та рішення
